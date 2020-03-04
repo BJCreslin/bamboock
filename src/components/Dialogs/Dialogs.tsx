@@ -35,6 +35,10 @@ export const Dialogs = () => {
         {id: 5, name: "Fedor"}
     ];
 
+    let DialogsDataElements = dialogsData.map(
+        dialog => <Dialog name={dialog.name} id={dialog.id}/>);
+
+
     const messagesData: Array<MessageProps> = [
         {id: 1, text: "hi"},
         {id: 2, text: "hello"},
@@ -42,23 +46,18 @@ export const Dialogs = () => {
         {id: 4, text: "skidishhh"},
         {id: 5, text: "ssss"},
     ];
+
+    let MessageDataElements = messagesData.map(
+        value => <Message text={value.text}/>);
+
     return (
         <div className={css.dialogsContainer}>
 
             <div className={css.dialogs}>
-
-                <Dialog id={1} name={"Dimych"}/>
-                <Dialog id={2} name={"Egor"}/>
-                <Dialog id={3} name={"Zlata"}/>
-                <Dialog id={4} name={"Nastya"}/>
-                <Dialog id={5} name={"Fedor"}/>
+                {DialogsDataElements}
             </div>
             <div className={css.messages}>
-                <Message text={"Hi"}/>
-                <Message text={"How are you"}/>
-                <Message text={"Super"}/>
-                <Message text={"Hitdch"}/>
-                <Message text={"Skidish"}/>
+                {MessageDataElements}
 
             </div>
         </div>
