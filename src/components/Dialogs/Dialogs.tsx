@@ -1,30 +1,18 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
+import Message from "./Message/Message";
+import {Dialog} from "./DialogItem/DialogsItem";
 
 let css = require("./dialogs.module.css");
 
-interface DialogProps {
+export interface DialogProps {
     id: number;
     name: string;
 }
 
-const Dialog: React.FunctionComponent<DialogProps> = (props) => {
-    let path = "/dialogs/" + props.id;
-    return (<div className={css.dialog}>
-        <NavLink to={path}>{props.name}</NavLink>
-    </div>)
-};
-
-interface MessageProps {
+export interface MessageProps {
     id?: number;
     text: string;
 }
-
-const Message: React.FunctionComponent<MessageProps> = (props) => {
-    return (
-        <div className={css.message}>{props.text}</div>
-    )
-};
 
 export const Dialogs = () => {
     const dialogsData: Array<DialogProps> = [
