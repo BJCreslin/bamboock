@@ -1,12 +1,14 @@
 import React from 'react';
 import Post from "./Post/Post";
-import {postspropsInterface} from "../../../App";
+import {postspropsInterface} from "../../../index";
 
 let css = require("./myposts.module.css");
 
 
 export function MyPosts(props: postspropsInterface) {
+
     let myPostsElements = props.posts.map(
+
         value => (<Post message={value.message} likescount={value.likesCount}/>)
     );
     return (

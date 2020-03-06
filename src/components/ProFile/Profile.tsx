@@ -1,11 +1,9 @@
 import React from 'react';
 import {ProfileInfo} from "./ProfileInfo/ProfileInfo";
 import {MyPosts} from "./MyPosts/MyPosts";
-import {postspropsInterface} from "../../App";
+import {postspropsInterface} from "../../index";
 
 let css = require("./content.module.css");
-
-
 
 const Profile = (props:postspropsInterface) => {
     return (
