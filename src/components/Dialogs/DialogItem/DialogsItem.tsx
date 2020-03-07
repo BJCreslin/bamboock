@@ -1,12 +1,12 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import {DialogProps} from "../Dialogs";
+import {DialogItemType} from "../../../index";
 
 let css = require("../dialogs.module.css");
 
 
-export const Dialog: React.FunctionComponent<DialogProps> = (props) => {
-    let path = "/dialogs/" + props.id;
+export const Dialog: React.FunctionComponent<DialogItemType> = (props) => {
+    let path = "/dialogs/" + props.name;
     return (<div className={css.dialog}>
         <NavLink to={path}>{props.name}</NavLink>
     </div>)

@@ -1,21 +1,17 @@
 import React from 'react';
 import Message from "./Message/Message";
 import {Dialog} from "./DialogItem/DialogsItem";
-import {propsDialogsInterface} from "../../App";
+import {DialogItemType, dialogspropsType} from "../../index";
 
 let css = require("./dialogs.module.css");
 
 
-export const Dialogs = (props:propsDialogsInterface) => {
-
+export function Dialogs (props:dialogspropsType) {
 
     let DialogsDataElements = props.dialogs.map(
         dialog => <Dialog name={dialog.name} id={dialog.id}/>);
 
-
-
-
-    let MessageDataElements = props.mesages.map(
+    let MessageDataElements = props.messages.map(
         value => <Message text={value.text}/>);
 
     return (
@@ -30,5 +26,5 @@ export const Dialogs = (props:propsDialogsInterface) => {
             </div>
         </div>
     )
-};
+}
 
