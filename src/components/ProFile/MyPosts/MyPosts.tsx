@@ -1,14 +1,13 @@
 import React from 'react';
 import Post from "./Post/Post";
-import {postspropsInterface} from "../../../index";
+import {postsType} from "../../../redux/stater";
 
 let css = require("./myposts.module.css");
 
 
-export function MyPosts(props: postspropsInterface) {
+export function MyPosts(props: postsType) {
 
     let myPostsElements = props.posts.map(
-
         value => (<Post message={value.message} likescount={value.likesCount}/>)
     );
     return (

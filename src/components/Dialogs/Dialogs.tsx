@@ -1,7 +1,7 @@
 import React from 'react';
 import Message from "./Message/Message";
 import {Dialog} from "./DialogItem/DialogsItem";
-import {DialogItemType, dialogspropsType} from "../../index";
+import {dialogspropsType} from "../../redux/stater";
 
 let css = require("./dialogs.module.css");
 

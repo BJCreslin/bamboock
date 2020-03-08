@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import {DialogItemType} from "../../../index";
+import {DialogItemType} from "../../../redux/stater";
 
 let css = require("../dialogs.module.css");
 

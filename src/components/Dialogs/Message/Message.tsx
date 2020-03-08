@@ -1,5 +1,5 @@
 import React from 'react';
-import {MessageType} from "../../../index";
+import { MessageType } from '../../../redux/stater';
 
 let css = require("../dialogs.module.css");
 
